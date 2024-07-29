@@ -7,6 +7,9 @@ Welcome to my Oh-My-Posh theme! This repository contains a theme configured by m
 2. Open the muzon.omp.json file in Github and click the button "raw". This will open a new tab with the raw content of the theme.
 3. Copy the URL from the browser and paste it in the $PROFILE of Windows Terminal. More information on how to do that on Oh-My-Posh.
 
+## How it looks like
+![Windows Terminal showing the theme of Muzon](example.png)
+
 ## Acknowledgements
 - Many thanks to the developers of Oh-My-Posh for their great tool.
 - Inspiration and help came from the fantastic community.
