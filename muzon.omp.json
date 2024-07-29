@@ -1,0 +1,92 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 2,
+  "final_space": true,
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "python",
+          "style": "plain",
+          "template": "({{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }})",
+          "properties": {
+            "fetch_version": false
+          },
+          "foreground": "white"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "template": "\u256d\u2500 ",
+          "foreground": "#c9cccd"
+        },
+        {
+          "type": "session",
+          "style": "plain",
+          "template": "<#f9b5ac>\uf2bd {{ .UserName }}</> <d><#73a7a7>on</></d> "
+        },
+        {
+          "type": "path",
+          "style": "plain",
+          "template": "\ue5ff {{ .Path }} ",
+          "properties": {
+            "style": "full"
+          },
+          "foreground": "#b87ea2"
+        },
+        {
+          "type": "git",
+          "style": "diamond",
+          "template": "<#db6e89>::</> {{ .UpstreamIcon }}{{ .HEAD }}{{ if .Staging.Changed }}<#FF6F00> \uf046 {{ .Staging.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
+          "properties": {
+            "fetch_status": true,
+            "fetch_stash_count": true,
+            "fetch_upstream_icon": true
+          },
+          "foreground": "#c9cccd"
+        },
+        {
+          "type": "time",
+          "style": "plain",
+          "template": "<d>[{{ .CurrentDate | date .Format }}]</d>",
+          "foreground": "#73a7a7"
+        }
+      ],
+      "newline": true
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "template": "\u2570\u2500 ",
+          "foreground": "#c9cccd"
+        }
+      ],
+      "newline": true
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "template": "~",
+          "foreground": "#db6e89"
+        }
+      ],
+      "newline": false
+    }
+  ]
+}
