@@ -39,7 +39,7 @@
         {
           "type": "session",
           "style": "plain",
-          "template": "<#f9b5ac>{{ .UserName }}</> <d><#73a7a7>on</></d> "
+          "template": "<#f9b5ac>{{ .UserName }}</> <d><#73a7a7>in</></d> "
         },
         {
           "type": "path",
