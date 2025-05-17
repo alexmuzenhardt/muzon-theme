@@ -42,12 +42,17 @@
           "template": "<#f9b5ac>{{ .UserName }}</> <d><#73a7a7>in</></d> "
         },
         {
-          "type": "path",
-          "style": "plain",
-          "template": "\ue5ff {{ .Path }} ",
           "properties": {
-            "style": "full"
+            "folder_icon": " \uf07c ",
+            "folder_separator_icon": " \uf061 ",
+            "home_icon": "\ueb06 ",
+            "style": "agnoster_short",
+            "max_depth": 3
           },
+          "leading_diamond": "<#b87ea2> \uf07b</>",
+          "type": "path",
+          "style": "diamond",
+          "template": " {{ .Path }} ",
           "foreground": "#b87ea2"
         },
         {
