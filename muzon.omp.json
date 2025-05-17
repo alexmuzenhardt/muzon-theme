@@ -1,23 +1,8 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "version": 2,
+  "version": 3,
   "final_space": true,
   "blocks": [
-    {
-      "type": "prompt",
-      "alignment": "left",
-      "segments": [
-        {
-          "type": "python",
-          "style": "plain",
-          "template": "({{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }})",
-          "properties": {
-            "fetch_version": false
-          },
-          "foreground": "white"
-        }
-      ]
-    },
     {
       "type": "prompt",
       "alignment": "left",
@@ -29,9 +14,32 @@
           "foreground": "#c9cccd"
         },
         {
+          "properties": {
+            "alpine": "\uf300",
+            "arch": "\uf303",
+            "centos": "\uf304",
+            "debian": "\uf306",
+            "elementary": "\uf309",
+            "fedora": "\uf30a",
+            "gentoo": "\uf30d",
+            "linux": "\ue712",
+            "macos": "\ue711",
+            "manjaro": "\uf312",
+            "mint": "\uf30f",
+            "opensuse": "\uf314",
+            "raspbian": "\uf315",
+            "ubuntu": "\uf31c",
+            "windows": "\ue70f"
+          },
+          "foreground": "#f9b5ac",
+          "type": "os",
+          "style": "diamond",
+          "template": "{{ if .WSL }}\ue712 on {{ end }}{{ .Icon }} "
+        },
+        {
           "type": "session",
           "style": "plain",
-          "template": "<#f9b5ac>\uf2bd {{ .UserName }}</> <d><#73a7a7>on</></d> "
+          "template": "<#f9b5ac>{{ .UserName }}</> <d><#73a7a7>on</></d> "
         },
         {
           "type": "path",
